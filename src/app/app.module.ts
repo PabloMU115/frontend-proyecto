@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CajasModule } from './cajas/cajas.module';
+import { SasModule } from './sas/sas.module';
 import { LoginModule } from './login/login.module';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { LoginModule } from './login/login.module';
     AppRoutingModule,
     HttpClientModule,
     CajasModule,
-    LoginModule
+    LoginModule,
+    SasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
