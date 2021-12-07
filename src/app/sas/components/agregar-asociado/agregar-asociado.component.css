@@ -6,3 +6,13 @@ body {
     height:550px;
     background-size: 100% 100%;
   }
+
+  .btn-guardar{
+    margin: 50px 280px;
+    width: 200px;
+  }
+
+  .row{
+    padding-left: 300px;
+    margin-bottom:20px;
+  }
