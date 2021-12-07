@@ -1,8 +1,18 @@
 body {
-    background-image: url('https://uploadgerencie.com/imagenes/sas.png');
-    background-repeat: no-repeat;
-    padding:13px;
-    width:1363px;
-    height:550px;
-    background-size: 100% 100%;
-  }
+  background-image: url('https://uploadgerencie.com/imagenes/sas.png');
+  background-repeat: no-repeat;
+  padding:13px;
+  width:1363px;
+  height:550px;
+  background-size: 100% 100%;
+}
+
+.d-flex{
+  width: 500px;
+  margin-bottom:20px;
+}
+
+button.btn-danger{
+  position:relative;
+    left:40%;
+}

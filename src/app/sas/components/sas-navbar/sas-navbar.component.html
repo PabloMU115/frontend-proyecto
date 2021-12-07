@@ -9,22 +9,6 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/sas/inicio']">Inicio</a>
           </li>
-          <!--li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Gestionar Usuarios
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/usuario']">Agregar Usuario</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/usuario']">Modificar Usuario</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/usuario']">Consultar Usuarios</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/usuario']">Eliminar Usuario</a></li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-          </li-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Gestionar Asociados
@@ -41,14 +25,40 @@
               <li><hr class="dropdown-divider"></li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Gestionar Beneficiarios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/sas/agregarAsociado']">Agregar Beneficiario</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/sas/modificarAsociado']">Modificar Beneficiario</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/sas/consultarAsociado']">Consultar Beneficiario</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/sas/eliminarAsociado']">Eliminar Beneficiario</a></li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Gestionar Cuentas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item">Modificar Cuenta</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item">Consultar Cuentas</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item">Eliminar Cuenta</a></li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['/sas/inicio']">Generar Reportes</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>

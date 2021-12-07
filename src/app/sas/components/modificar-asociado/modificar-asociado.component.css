@@ -1,8 +1,24 @@
 body {
-    background-image: url('https://uploadgerencie.com/imagenes/sas.png');
-    background-repeat: no-repeat;
-    padding:13px;
-    width:1363px;
-    height:550px;
-    background-size: 100% 100%;
-  }
+  background-image: url('https://uploadgerencie.com/imagenes/sas.png');
+  background-repeat: no-repeat;
+  padding:13px;
+  width:1363px;
+  height:550px;
+  background-size: 100% 100%;
+}
+
+.btn-guardar{
+  margin: 50px 280px;
+  width: 200px;
+}
+
+.row{
+  padding-left: 280px;
+  margin-bottom:20px;
+}
+
+ form.d-flex{
+  padding-left: 280px;
+  padding-right: 700px;
+  margin-bottom:40px;
+}
