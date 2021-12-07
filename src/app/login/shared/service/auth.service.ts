@@ -25,8 +25,7 @@ export class AuthService {
     return this.http.post<any>(`${environment.server}/auth/iniciar`, user)
       .pipe(
         tap(
-          ({token}) => {
-            console.log(token);         
+          ({token}) => {       
             this.doLogin(token);
             // console.log(this.getTokenDecode());
           }
@@ -53,26 +52,8 @@ export class AuthService {
   }
 
   doLogin(token: string){
-    //const tablas = ['', 'administradores', 'digitadores', 'interesados'];
     this.guardarToken(token);
-    //const usuario = this.getUsrActual(); 
     this.usrActualSubject.next(this.getUsrActual());
-    // const usuario = this.getUsrActual();
-    // this.filtrar.iniciarURI(tablas[usuario.rol]);
-    // this.filtrar.buscar(usuario.usr)
-    //   .then(
-    //     snapshot => {
-    //       snapshot.subscribe(
-    //         res => {
-    //           let nombre = Object(res)[0].nombre; //Obtengo el nomnbre del usuario
-    //           if (nombre.search(' ') != -1) { //Si el nombre tiene un espacio en blanco
-    //             nombre = nombre.substring(0, nombre.search(' '));
-    //           }
-    //           this.usrActualSubject.next(Object.assign(this.getUsrActual(), {nombre:nombre}));
-    //         }
-    //       )
-    //     }
-    //   ) 
   }
 
   doLogout(){
@@ -103,11 +84,11 @@ export class AuthService {
       return new Usuario(); 
     }
     const token = this.getTokenDecode();
-    return new Usuario(token.sub, token.rol);
+    return new Usuario(token.sub, parseInt(token.rol));
   }
   
   public get valorUsrActual(): Usuario{
     return this.usrActualSubject.value;
-  } 
+  }
  
 }
