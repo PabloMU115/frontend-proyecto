@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container-fluid">
+        <a  class="navbar-brand" href="http://localhost:4200/">Sistema de Prestamo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Procesamiento de solicitudes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/admindocumentacion']">Administrar documentación</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/registropoliza']">Registro de polizas</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/cargosadministrativos']">Cargos administrativos</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/registrogarantia']">Registrar garantías</a></li>
+                        <li><a class="dropdown-item" href="#">Asignación de tasas</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Formalización
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/depositosautomaticos']">Depósitos automaticos</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/emisioncheque']">Emisión de cheques</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/tablapago']">Generar tablas de pago</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/polizasasociadas']">Polizas asociadas</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Estado de préstamo
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/prestamosaprobados']">Prestamos aprobados</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/prestamosdesaprobados']">Prestamos desaprobados</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Control y mantenimiento
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/arreglopago']">Arreglo de pago</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/acuerdos']">Registrar acuerdos</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/cobrojud']">Cobro judicial</a></li>
+                        <li><a class="dropdown-item" href="#">Cargos por morosidad</a></li>
+                        <li><a class="dropdown-item" href="#">Historial de pagos</a></li>
+                        <li><a class="dropdown-item" href="#">Constancia de operación crediticia</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Emisión de constancias
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/cprestamoactivo']">Prestamos activos</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/cprestamogarantiahip']">Prestamos con garantía hipotecaria</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/cprestamocobrojud']">Prestamos en cobro judicial</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos finalizados</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos por asociado</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos por fecha</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos por número</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos nuevos</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Calculo de cobros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/cobroformalizado']">Cobro formalizado</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/cobrocuota']">Cobro por cuota</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/cobrodiferido']">Cobro diferido</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Administrar procesos crediticios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/informes']">Generar informes para asociados</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/desembolsoautomatico']">Desembolsos automáticos</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/comprobantepago']">Comprobante de pago</a></li>
+                        <li><a class="dropdown-item" href="#">Estado de cuenta</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Reportes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/rprestamoactivo']">Prestamos activos</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/rprestamogarantiahip']">Prestamos con garantía hipotecaria</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/rprestamocobrojud']">Prestamos en cobro judicial</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos finalizados</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos por asociado</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos por fecha</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos por número</a></li>
+                        <li><a class="dropdown-item" href="#">Prestamos nuevos</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

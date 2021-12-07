@@ -6,17 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CajasModule } from './cajas/cajas.module';
 import { LoginModule } from './login/login.module';
-
+import { PrestamosModule } from './prestamos/prestamos.module';
+import { NavBarComponent } from './prestamos/component/nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CajasModule,
-    LoginModule
+    LoginModule,
+    PrestamosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
