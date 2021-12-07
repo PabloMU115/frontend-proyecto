@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../shared/service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login-layout',
@@ -7,19 +9,32 @@ import { AuthService } from '../shared/service/auth.service';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
+  loginForm: FormGroup;
+  errorInicio: boolean = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private fb : FormBuilder,
+              private authService: AuthService,
+              private router:Router) { 
+    this.loginForm = this.fb.group({
+      id_usuario: ['', Validators.required],
+      passw: ['', Validators.required]
+    });
+  }
+              
 
   ngOnInit(): void {
-    const data = {
-        id_usuario: 'Rafael',
-        passw: '1234'
-    }
-    this.authService.login(data).subscribe(
-      res => {
-        console.log(this.authService.valorUsrActual)
+  }
+  
+  onSubmit() {
+    this.authService.login(this.loginForm.value)
+    .subscribe(
+      res=>{
+        if(!res || res === 401){
+          this.errorInicio= res === 401;
+        }else{
+          this.router.navigate(['/home']);
+        }
       }
     )
   }
-
 }
