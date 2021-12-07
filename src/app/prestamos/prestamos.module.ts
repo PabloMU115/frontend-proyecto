@@ -56,8 +56,7 @@ import { RprestamocobrojudComponent } from './component/rprestamocobrojud/rprest
     RprestamocobrojudComponent
   ],
   imports: [
-    CommonModule,
-  
+    CommonModule
   ]
 })
 export class PrestamosModule { }

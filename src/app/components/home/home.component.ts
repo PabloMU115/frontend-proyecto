@@ -15,17 +15,20 @@ export class HomeComponent implements OnInit {
   ) { }
 
   goAsociados(){
-    
+    this.router.navigate(['/asociados'])
   }
 
   goAhorros(){
-    // this.router.navigate(['/ahorros'])
-    alert('Descomentar la linea de redireccion')
+    this.router.navigate(['/ahorros'])
   }
 
   goCajas(){
     this.router.navigate(['/cajas'])
   }
+
+  // goPrestamos(){
+  //   this.router.navigate(['/prestamos'])
+  // }
 
   logout(){
     this.authService.logOut()

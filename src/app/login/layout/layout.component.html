@@ -33,7 +33,7 @@
           <div class="form-group">
             <label>
               <span>Contraseña</span>
-              <input type="text" class="form-control" formControlName="passw"
+              <input type="password" class="form-control" formControlName="passw"
               (focus)="errorInicio=false"
               [ngClass]="{'border-danger':loginForm.controls['passw'].invalid && loginForm.controls['passw'].touched}">
               <div class="alert alert-danger mt-1" *ngIf="loginForm.controls['passw'].invalid && loginForm.controls['passw'].touched">
@@ -42,7 +42,7 @@
             </label>
           </div>
           <div class="alert alert-danger" [ngStyle]="{'display': errorInicio ? 'block' : 'none'}">Usuario o Contraseña incorrecto</div>
-          <button type="button" form="loginForm" class="submit">Sign In</button>
+          <button type="submit" class="submit">Sign In</button>
       </form>
     </div>
 </div>

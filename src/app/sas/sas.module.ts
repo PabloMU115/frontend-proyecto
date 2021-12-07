@@ -23,12 +23,7 @@ import { EliminarAsociadoComponent } from './components/eliminar-asociado/elimin
     RouterModule
   ],
   exports: [
-    SasNavbarComponent,
-    SasHomeComponent,
-    AgregarAsociadoComponent,
-    ModificarAsociadoComponent,
-    ConsultarAsociadoComponent,
-    EliminarAsociadoComponent
+    SasNavbarComponent
   ]
 })
 export class SasModule { }
