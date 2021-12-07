@@ -26,6 +26,12 @@ import { RprestamocobrojudComponent } from './prestamos/component/rprestamocobro
 import { RprestamogarantiahipComponent } from './prestamos/component/rprestamogarantiahip/rprestamogarantiahip.component';
 import { TablapagoComponent } from './prestamos/component/tablapago/tablapago.component';
 
+import { AgregarAsociadoComponent } from './sas/components/agregar-asociado/agregar-asociado.component';
+import { ModificarAsociadoComponent } from './sas/components/modificar-asociado/modificar-asociado.component';
+import { SasHomeComponent } from './sas/components/sas-home/sas-home.component';
+import { ConsultarAsociadoComponent } from './sas/components/consultar-asociado/consultar-asociado.component';
+import { EliminarAsociadoComponent } from './sas/components/eliminar-asociado/eliminar-asociado.component';
+
 
 const routes: Routes = [
   {path: 'admindocumentacion', component:AdmindocumentacionComponent},
@@ -52,11 +58,16 @@ const routes: Routes = [
   {path: 'comprobantepago', component:ComprobantepagoComponent},
   {path: 'rprestamoactivo', component:RprestamoactivoComponent},
   {path: 'rprestamogarantiahip', component:RprestamogarantiahipComponent},
-  {path: 'rprestamocobrojud', component:RprestamocobrojudComponent}
+  {path: 'rprestamocobrojud', component:RprestamocobrojudComponent},
+  {path: 'sas/agregarAsociado', component: AgregarAsociadoComponent},
+  {path: 'sas/modificarAsociado', component: ModificarAsociadoComponent},
+  {path: 'sas/inicio', component: SasHomeComponent},
+  {path: 'sas/consultarAsociado', component: ConsultarAsociadoComponent},
+  {path: 'sas/eliminarAsociado', component: EliminarAsociadoComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule,]
 })
 export class AppRoutingModule { }
