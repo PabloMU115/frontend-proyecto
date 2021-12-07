@@ -1,0 +1,29 @@
+.main__container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 36px;
+    row-gap: 36px;
+}
+
+.main__container__item {
+    border-radius: 5px;
+    border: solid 2px #0D6EFD;
+    width: 150px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 300ms all ease;
+    cursor: pointer;
+}
+
+.main__container__item i {
+    margin-bottom: 12px;
+}
+
+.main__container__item:hover {
+    background-color: #0D6EFD;
+    color: #FFF;
+}
