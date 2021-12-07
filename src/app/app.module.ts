@@ -10,11 +10,13 @@ import { SasModule } from './sas/sas.module';
 import { LoginModule } from './login/login.module';
 import { PrestamosModule } from './prestamos/prestamos.module';
 import { NavBarComponent } from './prestamos/component/nav-bar/nav-bar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

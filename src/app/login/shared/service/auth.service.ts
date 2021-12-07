@@ -41,8 +41,6 @@ export class AuthService {
   }
 
   logOut(){
-    this.http.post<any>(`${environment.server}/auth/cerrar`, {id_usuario: this.getUsrActual().id_usuario})
-      .subscribe();
     this.doLogout();
     this.router.navigate(['/home']);
   }

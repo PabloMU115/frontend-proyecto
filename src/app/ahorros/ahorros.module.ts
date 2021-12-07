@@ -6,8 +6,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MainComponent } from './components/main/main.component';
 
-
-
 @NgModule({
   declarations: [
     // SidebarComponent,

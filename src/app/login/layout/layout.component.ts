@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../shared/service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login-layout',
@@ -12,7 +13,8 @@ export class LayoutComponent implements OnInit {
   errorInicio: boolean = false;
 
   constructor(private fb : FormBuilder,
-              private authService: AuthService) { 
+              private authService: AuthService,
+              private router:Router) { 
     this.loginForm = this.fb.group({
       id_usuario: ['', Validators.required],
       passw: ['', Validators.required]
@@ -21,24 +23,16 @@ export class LayoutComponent implements OnInit {
               
 
   ngOnInit(): void {
-    // const data = {
-    //     id_usuario: 'Rafael',
-    //     passw: '1234'
-    // }
-    // this.authService.login(data).subscribe(
-    //   res => {
-    //     console.log(this.authService.valorUsrActual)
-    //   }
-    // )
   }
+  
   onSubmit() {
-    this.authService.login({id_usuario: this.loginForm.value.usuario, passw: this.loginForm.value.passw})
+    this.authService.login(this.loginForm.value)
     .subscribe(
       res=>{
         if(!res || res === 401){
           this.errorInicio= res === 401;
         }else{
-          //this.router.navigate(['/home']);
+          this.router.navigate(['/home']);
         }
       }
     )
