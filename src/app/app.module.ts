@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { CajasModule } from './cajas/cajas.module';
 import { SasModule } from './sas/sas.module';
 import { LoginModule } from './login/login.module';
-
+import { PrestamosModule } from './prestamos/prestamos.module';
+import { NavBarComponent } from './prestamos/component/nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,7 @@ import { LoginModule } from './login/login.module';
     HttpClientModule,
     CajasModule,
     LoginModule,
+    PrestamosModule,
     SasModule
   ],
   providers: [],
