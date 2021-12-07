@@ -1,0 +1,5 @@
+ul li a:hover {
+    transition: 300ms all ease;
+    background-color: #0D6EFD;
+    color: #FFF;
+}
