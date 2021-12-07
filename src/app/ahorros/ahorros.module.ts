@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ComponentsComponent } from './components/components.component';
 import { LayoutComponent } from './layout/layout.component';
 
-
-
 @NgModule({
   declarations: [
     ComponentsComponent,
@@ -12,6 +10,9 @@ import { LayoutComponent } from './layout/layout.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    LayoutComponent
   ]
 })
 export class AhorrosModule { }
