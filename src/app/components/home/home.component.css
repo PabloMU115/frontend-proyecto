@@ -1,0 +1,35 @@
+.home__exit {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 40px;
+}
+
+.home__container {
+    height: 100vh;
+}
+
+.home__container__items {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 40%);
+}
+
+.home__container__item {
+    border-radius: 5px;
+    border: solid 2px #0D6EFD;
+    width: 170px;
+    height: 148px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 300ms all ease;
+    cursor: pointer;
+}
+
+.home__container__item:hover {
+    background-color: #0D6EFD;
+    color: #FFF;
+}
